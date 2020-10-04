@@ -25,8 +25,6 @@ const movieDB = {
 };
 
 
-
-
 const promoAdv = document.getElementsByClassName("promo__adv");
 promoAdv[0].remove();
 
@@ -38,9 +36,10 @@ bck[0].style.backgroundImage = "url('img/bg.jpg')";
 
 
 let newList = document.getElementsByClassName("promo__interactive-item");
+movieDB.movies.sort();
 
 for(let i=0; i <newList.length;i++){
-    movieDB.movies.sort();
+    
     newList[i].innerHTML =`${i+1}`+". " + movieDB.movies[i];
 }
 
